@@ -144,16 +144,6 @@
     "key": "ctrl+pageup"
   },
   {
-    "command": "-workbench.action.navigateForward",
-    "key": "alt+right",
-    "when": "canNavigateForward"
-  },
-  {
-    "command": "-workbench.action.navigateBack",
-    "key": "alt+left",
-    "when": "canNavigateBack"
-  },
-  {
     "key": "ctrl+p",
     "command": "-extension.vim_ctrl+p",
     "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
