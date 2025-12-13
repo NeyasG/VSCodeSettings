@@ -1,0 +1,170 @@
+// Place your key bindings in this file to override the defaults
+[
+  // NAVIGATION
+  {
+    "command": "workbench.action.terminal.focusNext",
+    "key": "ctrl+shift+a",
+    "when": "terminalFocus"
+  },
+  {
+    "command": "workbench.action.terminal.focusPrevious",
+    "key": "ctrl+shift+b",
+    "when": "terminalFocus"
+  },
+  {
+    "command": "workbench.action.togglePanel",
+    "key": "ctrl+shift+j"
+  },
+  {
+    "command": "workbench.action.terminal.new",
+    "key": "ctrl+shift+n",
+    "when": "terminalFocus"
+  },
+  {
+    "command": "workbench.action.terminal.kill",
+    "key": "ctrl+shift+w",
+    "when": "terminalFocus"
+  },
+  // EDITOR FOCUS
+  {
+    "command": "workbench.action.nextEditor",
+    "key": "alt+l",
+    "when": "editorFocus"
+  },
+  {
+    "command": "workbench.action.previousEditor",
+    "key": "alt+h",
+    "when": "editorFocus"
+  },
+  // Toggle between panel and editor focus
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.focusPanel",
+    "when": "editorFocus && !inQuickOpen"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "panelFocus"
+  },
+  // Panel Focus
+  {
+    "key": "alt+l",
+    "command": "workbench.action.nextPanelView",
+    "when": "panelFocus && panelVisible"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.previousPanelView",
+    "when": "panelFocus && panelVisible"
+  },
+  // FILE TREE
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "ctrl+e"
+  },
+  {
+    "command": "workbench.files.action.focusFilesExplorer",
+    "key": "ctrl+e",
+    "when": "editorTextFocus"
+  },
+  {
+    "command": "explorer.newFile",
+    "key": "n",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "renameFile",
+    "key": "r",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "explorer.newFolder",
+    "key": "shift+n",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "command": "deleteFile",
+    "key": "d",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  // Sidebar Navigation
+  {
+    "key": "alt+l",
+    "command": "workbench.action.nextSideBarView",
+    "when": "sideBarFocus"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.previousSideBarView",
+    "when": "sideBarFocus"
+  },
+  // EXTRA
+  {
+    "command": "editor.emmet.action.matchTag",
+    "key": "ctrl+shift+5"
+  },
+  {
+    "command": "workbench.action.toggleZenMode",
+    "key": "ctrl+z"
+  },
+  // VSCode Quick Picker Keybindings
+  {
+    "command": "quickInput.next",
+    "key": "ctrl+j",
+    "when": "inQuickInput && quickInputType == 'quickPick' || inQuickInput && quickInputType == 'quickTree'"
+  },
+  {
+    "command": "quickInput.previous",
+    "key": "ctrl+k",
+    "when": "inQuickInput && quickInputType == 'quickPick' || inQuickInput && quickInputType == 'quickTree'"
+  },
+  // VSCode Intellisense Keybindings
+  {
+    "command": "selectNextSuggestion",
+    "key": "ctrl+j",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "command": "selectPrevSuggestion",
+    "key": "ctrl+k",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  // Overwritten Default Keybindings
+  {
+    "command": "-workbench.action.newWindow",
+    "key": "ctrl+shift+n"
+  },
+  {
+    "command": "-workbench.action.nextEditor",
+    "key": "ctrl+pagedown"
+  },
+  {
+    "command": "-workbench.action.previousEditor",
+    "key": "ctrl+pageup"
+  },
+  {
+    "command": "-workbench.action.navigateForward",
+    "key": "alt+right",
+    "when": "canNavigateForward"
+  },
+  {
+    "command": "-workbench.action.navigateBack",
+    "key": "alt+left",
+    "when": "canNavigateBack"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "-extension.vim_ctrl+p",
+    "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "-extension.vim_ctrl+i",
+  },
+  {
+    "key": "ctrl+i",
+    "command": "extension.vim_ctrl+i",
+    "when": "editorTextFocus && vim.active && vim.use<C-i> && !inDebugRepl && vim.mode == 'Normal'"
+  }
+]
