@@ -3,7 +3,39 @@
   "vim.useSystemClipboard": true,
   "vim.leader": "<Space>",
   "vim.hlsearch": true,
+  // BOOKMARKS EXTENSION
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "<leader>",
+        "m"
+      ],
+      "commands": [
+        "bookmarks.toggle"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "b"
+      ],
+      "commands": [
+        "bookmarks.listFromAllFiles"
+      ]
+    }
+  ],
   "vim.normalModeKeyBindingsNonRecursive": [
+    // LANGUAGE TOOLS
+    // Text Editor Additions
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "lineBreakInsert"
+      ],
+      "silent": true
+    },
     // NAVIGATION
     // switch b/w buffers
     {
@@ -155,6 +187,15 @@
     {
       "before": [
         "leader",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.showAllSymbols"
+      ]
+    },
+    {
+      "before": [
+        "leader",
         "p"
       ],
       "commands": [
@@ -241,17 +282,8 @@
     "editor.suggest.insertMode": "replace",
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "go.toolsManagement.autoUpdate": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "remote.autoForwardPortsSource": "hybrid",
-  "[rust]": {},
   "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "github.copilot.chat.reviewSelection.instructions": [],
   "security.workspace.trust.untrustedFiles": "open",
   "chat.mcp.discovery.enabled": {
     "claude-desktop": false,
@@ -261,8 +293,7 @@
   },
   "python.analysis.typeCheckingMode": "basic",
   "files.associations": {
-    "*.ipynb": "sql",
-    "*.tmpl": "gotmpl",
+    "*.ipynb": "python",
     "*.yml": "yaml"
   },
   "[markdown]": {
@@ -344,4 +375,8 @@
     "wsl.localhost"
   ],
   "git.enableSmartCommit": true,
+  "bookmarks.label.suggestion": "suggestWhenSelectedOrLineWhenNoSelected",
+  "bookmarks.saveBookmarksInProject": true,
+  "workbench.editor.empty.hint": "hidden",
+  "vim.highlightedyank.enable": true,
 }

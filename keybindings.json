@@ -130,6 +130,17 @@
     "key": "ctrl+k",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
+  // VSCode Code Action Keybindings
+  {
+    "command": "selectNextCodeAction",
+    "key": "ctrl+j",
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "command": "selectPrevCodeAction",
+    "key": "ctrl+k",
+    "when": "codeActionMenuVisible"
+  },
   // Overwritten Default Keybindings
   {
     "command": "-workbench.action.newWindow",
