@@ -3,6 +3,7 @@
   "vim.useSystemClipboard": true,
   "vim.leader": "<Space>",
   "vim.hlsearch": true,
+  "vim.highlightedyank.enable": true,
   // BOOKMARKS EXTENSION
   "vim.normalModeKeyBindings": [
     {
@@ -196,6 +197,15 @@
     {
       "before": [
         "leader",
+        "r"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
+    },
+    {
+      "before": [
+        "leader",
         "p"
       ],
       "commands": [
@@ -269,12 +279,25 @@
       ]
     }
   ],
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
+  // Python settings
+  // "python.languageServer": "None",
+  "python.analysis.typeCheckingMode": "standard",
+  "python.analysis.stubPath": ".vscode",
+  "files.associations": {
+    "*.ipynb": "python",
+    "*.yml": "yaml"
   },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "python.terminal.shellIntegration.enabled": true,
+  "python.analysis.supportAllPythonDocuments": true,
+  "python.analysis.extraPaths": [
+    "src",
+    "lib",
+    "resources"
+  ],
+  // Other languages
   "[jsonc]": {
     "editor.quickSuggestions": {
       "strings": true
@@ -282,45 +305,18 @@
     "editor.suggest.insertMode": "replace",
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "remote.autoForwardPortsSource": "hybrid",
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "security.workspace.trust.untrustedFiles": "open",
-  "chat.mcp.discovery.enabled": {
-    "claude-desktop": false,
-    "windsurf": false,
-    "cursor-global": false,
-    "cursor-workspace": false
-  },
-  "python.analysis.typeCheckingMode": "basic",
-  "files.associations": {
-    "*.ipynb": "python",
-    "*.yml": "yaml"
-  },
   "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "[dockercompose]": {
     "editor.defaultFormatter": "docker.docker"
   },
-  "github.copilot.chat.summarizeAgentConversationHistory.enabled": false,
-  "github.copilot.nextEditSuggestions.enabled": true,
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml",
   },
-  "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff"
-  },
-  "git.autofetch": true,
-  "chat.mcp.autostart": "newAndOutdated",
-  "github.copilot.chat.newWorkspace.useContext7": true,
-  "python.terminal.shellIntegration.enabled": true,
-  "python.analysis.supportAllPythonDocuments": true,
-  "redhat.telemetry.enabled": false,
-  "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
-  "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
-  "docker.extension.enableComposeLanguageServer": false,
   "yaml.schemas": {
-    "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
+    "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml",
+    "file:///c%3A/Users/NeyasGuruswamy/.vscode/extensions/atlassian.atlascode-4.0.14/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
   "yaml.customTags": [
     "!ENV scalar",
@@ -331,16 +327,47 @@
     "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format",
     "tag:yaml.org,2002:python/object/apply:pymdownx.slugs.slugify mapping"
   ],
+  "docker.extension.enableComposeLanguageServer": false,
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  "remoteHub.commitDirectlyWarning": "off",
-  "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
-  "[toml]": {},
-  "extensions.ignoreRecommendations": true,
-  "editor.defaultFormatter": "charliermarsh.ruff",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
   "notebook.defaultFormatter": "charliermarsh.ruff",
+  "notebook.output.scrolling": true,
+  // LLP & AI
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.summarizeAgentConversationHistory.enabled": false,
+  "chat.mcp.discovery.enabled": {
+    "claude-desktop": false,
+    "windsurf": false,
+    "cursor-global": false,
+    "cursor-workspace": false
+  },
+  "chat.mcp.autostart": "newAndOutdated",
+  "github.copilot.chat.newWorkspace.useContext7": true,
+  // Remote/WSL Settings
+  "remote.autoForwardPortsSource": "hybrid",
+  "remoteHub.commitDirectlyWarning": "off",
+  "streamdeck.serverHost": "0.0.0.0",
+  "security.allowedUNCHosts": [
+    "wsl.localhost"
+  ],
+  // VSCode Application Settings
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.defaultFormatter": "charliermarsh.ruff",
   "workbench.colorTheme": "Atom One Dark",
   "window.menuBarVisibility": "compact",
   "workbench.activityBar.location": "top",
@@ -350,33 +377,39 @@
   "editor.suggest.insertMode": "replace",
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "editor.linkedEditing": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
   "launch": {},
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
   "editor.minimap.enabled": false,
-  "breadcrumbs.enabled": false,
   "workbench.iconTheme": "vscode-icons",
   "zenMode.hideLineNumbers": false,
   "editor.lineNumbers": "relative",
-  "python.analysis.extraPaths": [
-    "src"
-  ],
   "editor.fontFamily": "Cascadia Code",
   "editor.fontLigatures": true,
   "workbench.settings.applyToAllProfiles": [
     "terminal.integrated.shellIntegration.showCommandGuide"
   ],
+  "workbench.editor.empty.hint": "hidden",
+  // Git settings
+  "git.autofetch": true,
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "git.confirmSync": false,
+  // Other Extension Settings
+  "redhat.telemetry.enabled": false,
+  "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+  "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
+  "extensions.ignoreRecommendations": true,
   "docker.extension.experimental.composeCompletions": true,
   "vsicons.dontShowNewVersionMessage": true,
-  "streamdeck.serverHost": "0.0.0.0",
-  "security.allowedUNCHosts": [
-    "wsl.localhost"
-  ],
   "git.enableSmartCommit": true,
   "bookmarks.label.suggestion": "suggestWhenSelectedOrLineWhenNoSelected",
   "bookmarks.saveBookmarksInProject": true,
-  "workbench.editor.empty.hint": "hidden",
-  "vim.highlightedyank.enable": true,
+  "atlascode.rovodev.showEntitlementNotifications": false,
+  "ruff.format.preview": true,
+  "ruff.configurationPreference": "filesystemFirst",
+  "python.analysis.inlayHints.callArgumentNames": "all",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.pytestParameters": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "markdownlint.config": {},
+  "chat.mcp.gallery.enabled": true,
 }

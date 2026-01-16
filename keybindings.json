@@ -29,12 +29,12 @@
   {
     "command": "workbench.action.nextEditor",
     "key": "alt+l",
-    "when": "editorFocus"
+    "when": "editorFocus || notebookEditorFocused"
   },
   {
     "command": "workbench.action.previousEditor",
     "key": "alt+h",
-    "when": "editorFocus"
+    "when": "editorFocus || notebookEditorFocused"
   },
   // Toggle between panel and editor focus
   {
@@ -167,5 +167,40 @@
     "key": "ctrl+i",
     "command": "extension.vim_ctrl+i",
     "when": "editorTextFocus && vim.active && vim.use<C-i> && !inDebugRepl && vim.mode == 'Normal'"
+  },
+  {
+    "key": "ctrl+alt+k",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+up",
+    "command": "-editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+down",
+    "command": "-editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+i",
+    "command": "chatgpt.openSidebar",
+    "when": "!view.chatgpt.sidebarView.visible"
+  },
+  {
+    "key": "ctrl+alt+i",
+    "command": "-workbench.action.chat.open",
+    "when": "!chatSetupDisabled && !chatSetupHidden"
+  },
+  {
+    "key": "ctrl+alt+i",
+    "command": "-workbench.panel.chat",
+    "when": "workbench.panel.chat.view.copilot.active"
   }
 ]
