@@ -106,7 +106,8 @@
   },
   {
     "command": "workbench.action.toggleZenMode",
-    "key": "ctrl+z"
+    "key": "ctrl+z",
+    "when": "!vim.active"
   },
   // VSCode Quick Picker Keybindings
   {
@@ -202,5 +203,15 @@
     "key": "ctrl+alt+i",
     "command": "-workbench.panel.chat",
     "when": "workbench.panel.chat.view.copilot.active"
+  },
+  {
+    "key": "ctrl+alt+i",
+    "command": "-atlascode.rovodev.askInteractive",
+    "when": "atlascode:rovoDevEnabled && editorTextFocus && !atlascode:bbyEnvironmentActive"
+  },
+  {
+    "key": "ctrl+alt+a",
+    "command": "-atlascode.rovodev.addToContext",
+    "when": "atlascode:rovoDevEnabled && editorTextFocus"
   }
 ]

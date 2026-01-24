@@ -220,7 +220,16 @@
       "commands": [
         "editor.action.showDefinitionPreviewHover"
       ]
-    }
+    },
+    {
+      "before": [
+        "leader",
+        "R"
+      ],
+      "commands": [
+        "editor.action.refactor"
+      ]
+    },
   ],
   "vim.visualModeKeyBindings": [
     // Stay in visual mode while indenting
@@ -316,16 +325,16 @@
   },
   "yaml.schemas": {
     "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml",
-    "file:///c%3A/Users/NeyasGuruswamy/.vscode/extensions/atlassian.atlascode-4.0.14/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    "file:///c%3A/Users/NeyasGuruswamy/.vscode/extensions/atlassian.atlascode-4.0.17/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
   "yaml.customTags": [
     "!ENV scalar",
     "!ENV sequence",
     "!relative scalar",
-    "tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg",
-    "tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji",
-    "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format",
-    "tag:yaml.org,2002:python/object/apply:pymdownx.slugs.slugify mapping"
+    // "tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg",
+    // "tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji",
+    // "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format",
+    // "tag:yaml.org,2002:python/object/apply:pymdownx.slugs.slugify mapping"
   ],
   "docker.extension.enableComposeLanguageServer": false,
   "[github-actions-workflow]": {
@@ -365,7 +374,6 @@
     "wsl.localhost"
   ],
   // VSCode Application Settings
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
   "security.workspace.trust.untrustedFiles": "open",
   "editor.defaultFormatter": "charliermarsh.ruff",
   "workbench.colorTheme": "Atom One Dark",
@@ -393,6 +401,16 @@
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
   "git.confirmSync": false,
+  // Terminal Settings
+  "terminal.integrated.profiles.windows": {
+    "Git Bash": {
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+      "args": [
+        "-l"
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
   // Other Extension Settings
   "redhat.telemetry.enabled": false,
   "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
@@ -412,4 +430,12 @@
   "python.analysis.inlayHints.variableTypes": true,
   "markdownlint.config": {},
   "chat.mcp.gallery.enabled": true,
+  "git.blame.editorDecoration.enabled": true,
+  "scm.alwaysShowRepositories": true,
+  "scm.defaultViewMode": "tree",
+  "files.exclude": {
+    "__pycache__": true,
+    ".pytest_cache/": true,
+    ".ruff_cache/": true
+  },
 }
