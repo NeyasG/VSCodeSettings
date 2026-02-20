@@ -81,7 +81,7 @@
   {
     "command": "explorer.newFolder",
     "key": "shift+n",
-    "when": "explorerViewletFocus"
+    "when": "explorerViewletFocus && !inputFocus"
   },
   {
     "command": "deleteFile",
@@ -191,11 +191,6 @@
   },
   {
     "key": "ctrl+alt+i",
-    "command": "chatgpt.openSidebar",
-    "when": "!view.chatgpt.sidebarView.visible"
-  },
-  {
-    "key": "ctrl+alt+i",
     "command": "-workbench.action.chat.open",
     "when": "!chatSetupDisabled && !chatSetupHidden"
   },
@@ -213,5 +208,13 @@
     "key": "ctrl+alt+a",
     "command": "-atlascode.rovodev.addToContext",
     "when": "atlascode:rovoDevEnabled && editorTextFocus"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-workbench.action.quickOpen"
   }
 ]
